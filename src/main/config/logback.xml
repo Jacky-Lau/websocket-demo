@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<Target>System.err</Target>
+		<encoder>
+			<pattern>%d [%thread] %logger{50}::%method %n %-5level- %message%n%n</pattern>
+			<charset>UTF-8</charset> 
+		</encoder>
+	</appender>
+	<logger name="com.mchange">
+		<level value="WARN"/>
+	</logger>
+	<logger name="org.hibernate">
+		<level value="INFO"/>
+	</logger>
+	<logger name="ch.qos">
+		<level value="WARN"/>
+	</logger>
+	<logger name="org.springframework">
+		<level value="WARN"/>
+	</logger>
+	<logger name="org.apache.cxf">
+		<level value="INFO"/>
+	</logger>
+	<logger name="edu.zju.bme.websocket">
+		<level value="TRACE"/>
+	</logger>
+	<root>
+		<appender-ref ref="STDOUT" level="TRACE"/>
+	</root>
+	<consolePlugin/>
+</configuration>
